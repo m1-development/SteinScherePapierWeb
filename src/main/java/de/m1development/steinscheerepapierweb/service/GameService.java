@@ -8,5 +8,5 @@ public interface GameService {
     
     String getGameIndexFile();
 
-    String play(Model model, String humanChoice);
+    String play(Model model);
 }

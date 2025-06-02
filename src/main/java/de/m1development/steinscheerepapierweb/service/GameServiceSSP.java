@@ -21,14 +21,15 @@ public class GameServiceSSP implements GameService {
     }
 
     @Override
-    public String play(Model model, String humanChoice) {
+    public String play(Model model) {
+        String humanChoice = String.valueOf(model.getAttribute("humanChoice"));
         Symbols computerChoice = Symbols.getRandomSymbol();
 
         String gameResult = playInternal(Symbols.fromString(humanChoice), computerChoice);
 
-        model.addAttribute("choice", humanChoice);
-        model.addAttribute("computer", computerChoice);
+        model.addAttribute("computerChoice", computerChoice);
         model.addAttribute("gameResult", gameResult);
+
         return RESULT_HTML;
     }
 

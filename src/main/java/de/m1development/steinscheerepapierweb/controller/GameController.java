@@ -25,6 +25,7 @@ public class GameController {
 
     @RequestMapping("/play")
     public String play(Model model, @RequestParam String humanChoice) {
-        return gameService.play(model, humanChoice);
+        model.addAttribute("humanChoice", humanChoice);
+        return gameService.play(model);
     }
 }
