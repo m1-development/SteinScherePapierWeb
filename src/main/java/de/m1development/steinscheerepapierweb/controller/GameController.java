@@ -24,12 +24,7 @@ public class GameController {
     }
 
     @RequestMapping("/play")
-    public String play(Model model, @RequestParam String choice) {
-        model.addAttribute("choice", choice);
-
-        String gameResult = "Unentschieden"; // TODO: Implement game logic
-        model.addAttribute("gameResult", gameResult);
-
-        return gameService.getGameResultFile();
+    public String play(Model model, @RequestParam String humanChoice) {
+        return gameService.play(model, humanChoice);
     }
 }

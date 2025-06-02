@@ -1,6 +1,8 @@
 package de.m1development.steinscheerepapierweb.service;
 
+import de.m1development.steinscheerepapierweb.model.Symbols;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 @Service
 public class GameServiceSSP implements GameService {
@@ -19,7 +21,18 @@ public class GameServiceSSP implements GameService {
     }
 
     @Override
-    public String getGameResultFile() {
+    public String play(Model model, String humanChoice) {
+        Symbols computerChoice = Symbols.getRandomSymbol();
+
+        String gameResult = playInternal(Symbols.fromString(humanChoice), computerChoice);
+
+        model.addAttribute("choice", humanChoice);
+        model.addAttribute("computer", computerChoice);
+        model.addAttribute("gameResult", gameResult);
         return RESULT_HTML;
+    }
+
+    public String playInternal(Symbols humanChoice, Symbols computerChoice) {
+        return humanChoice.versus(computerChoice);
     }
 }
