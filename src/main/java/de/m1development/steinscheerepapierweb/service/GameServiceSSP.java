@@ -5,7 +5,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class GameServiceSSP implements GameService {
     private static final String GAME_ID = "Stein Schere Papier";
-    public static final String HTML_FILE = "indexSSP.html";
+    public static final String INDEX_HTML = "indexSSP.html";
+    public static final String RESULT_HTML = "resultSSP.html";
 
     @Override
     public String getGameId() {
@@ -13,7 +14,12 @@ public class GameServiceSSP implements GameService {
     }
 
     @Override
-    public String getGameRessourceFile() {
-        return HTML_FILE;
+    public String getGameIndexFile() {
+        return INDEX_HTML;
+    }
+
+    @Override
+    public String getGameResultFile() {
+        return RESULT_HTML;
     }
 }

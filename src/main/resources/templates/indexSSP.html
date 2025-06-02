@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stein Scheere Papier</title>
-</head>
-<body>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Your Game</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+            h1 {
+                color: #333;
+            }
+            button {
+                background-color: #4CAF50; /* Grün */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background-color 0.3s;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><span th:text="${gameId}">GameId</span></h1>
 
-<h1>Sie spielen '<span th:text="${gameId}">GameId</span>'</h1>
+        <button onclick="window.location.href='/play?choice=Stein'">Stein</button>
+        <button onclick="window.location.href='/play?choice=Schere'">Schere</button>
+        <button onclick="window.location.href='/play?choice=Papier'">Papier</button>
 
-</body>
+    </body>
 </html>

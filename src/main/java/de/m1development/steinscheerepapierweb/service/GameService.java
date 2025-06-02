@@ -4,5 +4,7 @@ public interface GameService {
     
     String getGameId();
     
-    String getGameRessourceFile();
+    String getGameIndexFile();
+
+    String getGameResultFile();
 }
