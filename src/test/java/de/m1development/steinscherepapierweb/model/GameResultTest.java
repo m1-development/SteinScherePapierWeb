@@ -8,8 +8,8 @@ class GameResultTest {
 
     @Test
     void testToString() {
-        assertEquals(GameResult.DRAW.toString(), "Unentschieden!");
-        assertEquals(GameResult.WON.toString(), "Sie haben gewonnen!");
-        assertEquals(GameResult.LOST.toString(), "Sie haben verloren!");
+        assertEquals("Unentschieden!", GameResult.DRAW.toString());
+        assertEquals("Sie haben gewonnen!", GameResult.WON.toString());
+        assertEquals("Sie haben verloren!", GameResult.LOST.toString());
     }
 }

@@ -8,36 +8,36 @@ class SymbolsTest {
 
     @Test
     void testToString() {
-        assertEquals(Symbols.STEIN.toString(), "Stein");
-        assertEquals(Symbols.SCHERE.toString(), "Schere");
-        assertEquals(Symbols.PAPIER.toString(), "Papier");
+        assertEquals("Stein", Symbols.STEIN.toString());
+        assertEquals("Schere", Symbols.SCHERE.toString());
+        assertEquals("Papier", Symbols.PAPIER.toString());
     }
 
     @Test
     void fromString() {
-        assertEquals(Symbols.fromString("Stein"), Symbols.STEIN);
-        assertEquals(Symbols.fromString("Schere"), Symbols.SCHERE);
-        assertEquals(Symbols.fromString("Papier"), Symbols.PAPIER);
+        assertEquals(Symbols.STEIN, Symbols.fromString("Stein"));
+        assertEquals(Symbols.SCHERE, Symbols.fromString("Schere"));
+        assertEquals(Symbols.PAPIER, Symbols.fromString("Papier"));
     }
 
     @Test
     void versusStoneAgainstAllSymbols() {
-        assertEquals(Symbols.STEIN.versus(Symbols.STEIN), GameResult.DRAW.toString());
-        assertEquals(Symbols.STEIN.versus(Symbols.SCHERE), GameResult.WON.toString());
-        assertEquals(Symbols.STEIN.versus(Symbols.PAPIER), GameResult.LOST.toString());
+        assertEquals(GameResult.DRAW.toString(), Symbols.STEIN.versus(Symbols.STEIN));
+        assertEquals(GameResult.WON.toString(), Symbols.STEIN.versus(Symbols.SCHERE));
+        assertEquals(GameResult.LOST.toString(), Symbols.STEIN.versus(Symbols.PAPIER));
     }
 
     @Test
     void versusScissorAgainstAllSymbols() {
-        assertEquals(Symbols.SCHERE.versus(Symbols.SCHERE), GameResult.DRAW.toString());
-        assertEquals(Symbols.SCHERE.versus(Symbols.PAPIER), GameResult.WON.toString());
-        assertEquals(Symbols.SCHERE.versus(Symbols.STEIN), GameResult.LOST.toString());
+        assertEquals(GameResult.DRAW.toString(), Symbols.SCHERE.versus(Symbols.SCHERE));
+        assertEquals(GameResult.WON.toString(), Symbols.SCHERE.versus(Symbols.PAPIER));
+        assertEquals(GameResult.LOST.toString(), Symbols.SCHERE.versus(Symbols.STEIN));
     }
 
     @Test
     void versusPaperAgainstAllSymbols() {
-        assertEquals(Symbols.PAPIER.versus(Symbols.PAPIER), GameResult.DRAW.toString());
-        assertEquals(Symbols.PAPIER.versus(Symbols.STEIN), GameResult.WON.toString());
-        assertEquals(Symbols.PAPIER.versus(Symbols.SCHERE), GameResult.LOST.toString());
+        assertEquals(GameResult.DRAW.toString(), Symbols.PAPIER.versus(Symbols.PAPIER));
+        assertEquals(GameResult.WON.toString(), Symbols.PAPIER.versus(Symbols.STEIN));
+        assertEquals(GameResult.LOST.toString(), Symbols.PAPIER.versus(Symbols.SCHERE));
     }
 }

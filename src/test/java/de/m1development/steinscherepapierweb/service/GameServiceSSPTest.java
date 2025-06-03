@@ -12,18 +12,18 @@ class GameServiceSSPTest {
 
     @Test
     void getGameId() {
-        assertEquals(gameServiceSSP.getGameId(), "Stein Schere Papier");
+        assertEquals("Stein Schere Papier", gameServiceSSP.getGameId());
     }
 
     @Test
     void getGameIndexFile() {
-        assertEquals(gameServiceSSP.getGameIndexFile(), "indexSSP.html");
+        assertEquals("indexSSP.html", gameServiceSSP.getGameIndexFile());
     }
 
     @Test
     void playInternalWithAllGameResults() {
-        assertEquals(gameServiceSSP.playInternal(Symbols.STEIN, Symbols.SCHERE), GameResult.WON.toString());
-        assertEquals(gameServiceSSP.playInternal(Symbols.STEIN, Symbols.PAPIER), GameResult.LOST.toString());
-        assertEquals(gameServiceSSP.playInternal(Symbols.STEIN, Symbols.STEIN), GameResult.DRAW.toString());
+        assertEquals(GameResult.WON.toString(), gameServiceSSP.playInternal(Symbols.STEIN, Symbols.SCHERE));
+        assertEquals(GameResult.LOST.toString(), gameServiceSSP.playInternal(Symbols.STEIN, Symbols.PAPIER));
+        assertEquals(GameResult.DRAW.toString(), gameServiceSSP.playInternal(Symbols.STEIN, Symbols.STEIN));
     }
 }
