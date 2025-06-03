@@ -1,13 +1,13 @@
-package de.m1development.steinscheerepapierweb;
+package de.m1development.steinscherepapierweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SteinScheerePapierWebApplication {
+public class SteinScherePapierWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SteinScheerePapierWebApplication.class, args);
+        SpringApplication.run(SteinScherePapierWebApplication.class, args);
     }
 
 }

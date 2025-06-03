@@ -1,4 +1,4 @@
-package de.m1development.steinscheerepapierweb.model;
+package de.m1development.steinscherepapierweb.model;
 
 import org.junit.jupiter.api.Test;
 

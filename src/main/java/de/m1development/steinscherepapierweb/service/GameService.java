@@ -1,4 +1,4 @@
-package de.m1development.steinscheerepapierweb.service;
+package de.m1development.steinscherepapierweb.service;
 
 import org.springframework.ui.Model;
 

@@ -1,6 +1,6 @@
-package de.m1development.steinscheerepapierweb.controller;
+package de.m1development.steinscherepapierweb.controller;
 
-import de.m1development.steinscheerepapierweb.service.GameService;
+import de.m1development.steinscherepapierweb.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

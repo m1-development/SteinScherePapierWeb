@@ -1,7 +1,7 @@
-package de.m1development.steinscheerepapierweb.service;
+package de.m1development.steinscherepapierweb.service;
 
-import de.m1development.steinscheerepapierweb.model.GameResult;
-import de.m1development.steinscheerepapierweb.model.Symbols;
+import de.m1development.steinscherepapierweb.model.GameResult;
+import de.m1development.steinscherepapierweb.model.Symbols;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
