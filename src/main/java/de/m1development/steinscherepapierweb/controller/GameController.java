@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GameController {
 
-    GameService gameService;
+    private final GameService gameService;
 
     @Autowired
     public GameController(GameService gameService) {

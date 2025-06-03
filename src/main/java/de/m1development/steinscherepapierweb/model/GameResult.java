@@ -6,14 +6,10 @@ public enum GameResult
 
     @Override
     public String toString() {
-        switch (this) {
-            case WON:
-                return "Sie haben gewonnen!";
-            case LOST:
-                return "Sie haben verloren!";
-            case DRAW:
-            default:
-                return "Unentschieden!";
-        }
+        return switch (this) {
+            case WON -> "Sie haben gewonnen!";
+            case LOST -> "Sie haben verloren!";
+            case DRAW -> "Unentschieden!";
+        };
     }
 }

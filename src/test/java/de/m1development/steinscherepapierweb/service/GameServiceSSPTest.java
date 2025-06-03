@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GameServiceSSPTest {
 
-    GameServiceSSP gameServiceSSP = new GameServiceSSP();
+    private final GameServiceSSP gameServiceSSP = new GameServiceSSP();
 
     @Test
     void getGameId() {
